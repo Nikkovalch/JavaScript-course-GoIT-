@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-container container">
+        <a href="" class="logo"></a>
+        <nav class="menu">
+          <ul class="list">
+            <li class="item"><a href="" class="link">photo</a></li>
+            <li class="item"><a href="" class="link">gallery</a></li>
+            <li class="item"><a href="" class="link">About</a></li>
+            <li class="item"><a href="" class="link">cataloge</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-container container">
+        <h1 class="title">Тестувальна сторінка</h1>
+        <form class="form" autocomplete="off">
+          <p class="text-form">Відправка форми(тест)</p>
+
+          <div role="group" class="block-1">
+            <label class="label">
+              <input class="input" type="email" name="email" autofocus placeholder=" " required />
+              <span class="label-text">Пошта</span>
+            </label>
+
+            <label class="label">
+              <input class="input" type="tel" name="user-phone" placeholder=" " />
+              <span class="label-text">Номер телефону</span>
+            </label>
+
+            <label class="label">
+              <input class="input" type="password" name="pass" maxlength="8" placeholder=" " required />
+              <span class="label-text">Password</span>
+            </label>
+          </div>
+
+          <div role="group" class="block-2">
+            <div class="checkbox-wrap">
+              <input class="checkbox" type="checkbox" name="JS" value="JS" id="js">
+              <label class="label-checkbox" for="js"><span class="span">JavaScript</span></label>
+            </div>
+            <div class="checkbox-wrap">
+              <input class="checkbox" type="checkbox" name="piton" value="piton" id="piton">
+              <label class="label-checkbox" for="piton"><span class="span">Piton</span></label>
+            </div>
+            <div class="checkbox-wrap">
+              <input class="checkbox" type="checkbox" name="java" value="java" id="java">
+              <label class="label-checkbox" for="java"><span class="span">Java</span></label>
+            </div>
+          </div>
+
+          <button type="submit" class="button">Відправити</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container container">
+        <p class="footer__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati odio in maxime, esse nisi asperiores dignissimos quos temporibus, animi culpa, voluptates saepe voluptatibus eos aperiam quisquam iste aut doloribus. Sed?
+        </p>
+      </div>
+    </footer>
+  </div>
+  <!-- Підключення JavaScript -->
+  <!-- <script src="./js/script01.js" type="module"></script> -->
+  <!-- <script src="./js/script02.js" type="module"></script> -->
+  <!-- <script src="./js/mas+arr.js" type="module"></script> -->
+  <!-- <script src="./js/function.js" type="module"></script> -->
+  <!-- <script src="./js/object.js" type="module"></script> -->
+  <!-- <script src="./js/object_spreat_rest.js" type="module"></script> -->
+  <script src="./js/function_callback.js" type="module"></script>
+</body>
+
+</html>
