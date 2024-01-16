@@ -99,3 +99,6 @@ qwerty(getColor, "red")
 // for(const number of numbers) {
 //   console.log(numbers.indexOf(number), number);
 // }
+
+let a = 5
+let b = 5 + a
