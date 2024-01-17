@@ -1,104 +1,52 @@
-// Колбек-функція
-// function userName(name) {
-//   return name;
-// }
+//Колбек-функції
 
-// function userPass(password, login) {
-//   console.log(`password: ${password}`);
-//   console.log(login(`login: ${"Mykola"}`));
-// }
+/*function greet(name) {
+  return `Ласкаво просимо ${name}`
+}
 
-// userPass(12345678, userName)
-///
-// function processCall(recipient) {
-//   // Імітуємо доступність абонента випадковим числом
-//   const random = Math.random()
-//   console.log(random);
+function returnFoo(name, foo) {
+  console.log(foo(name));
+} 
 
-//   const isRecipientAvailable = random > 0.5;
-//   console.log(isRecipientAvailable);
-  
-//   if (!isRecipientAvailable) {
-//     console.log(`Абонент ${recipient} недоступний, залиште повідомлення.`);
-//     // Логіка активації автовідповідача
-//   } else {
-//     console.log(`З'єднуємо з ${recipient}, очікуйте...`);
-//     // Логіка прийняття дзвінка
-//   }
-// }
+returnFoo("Petro", greet);*/
 
-// processCall("Манго");
-////////////////////////////////////////////////////////
+//Інлайн колбеки
+/*function registerGuest(name, callback) {
+  callback(name);
+}
 
-// const listUsers = [
-//   {name: "Mykola"},
-//   {name: "Petro"},
-//   {name: "Natali"},
-//   {name: "Valera"},
-//   {name: "Vasia"},
-//   {name: "Katia"},
-// ];
+// Передаємо інлайн функцію greet у якості колбека
+registerGuest("Манго", function greet(name) {
+  console.log(`Ласкаво просимо ${name}.`);
+});*/
 
-// const blockedUsers = [];
+//Декілька колбеків
+function processCall(recipient, onAvailable, onNotAvailable) {
+  // Імітуємо доступність абонента випадковим числом
+  const isRecipientAvailable = Math.random() > 0.5;
 
-// function userSubscription(userName, listUsers, blockUser, getLike, notLike) {
-//   if(getLike(userName, listUsers)) {
-//     return `Користува ${userName} поставив вам лайк`;
-//   }
-//   return notLike(userName, blockUser)
-// }
+  if (!isRecipientAvailable) {
+    onNotAvailable(recipient);
+    return;
+  }
 
-// function getUserLike(name, listUsers) {
-//   for(const user of listUsers) {
-//     if(user.name === name) {
-//       return `Так цей користувач ставив лайки!`
-//     }
-//   }
-// }
+  onAvailable(recipient);
+}
 
-// function notLike(name, blockUser) {  
-//   blockUser.push(name)
-// }
+function takeCall(name) {
+  console.log(`З'єднуємо з ${name}, очікуйте...`);
+  // Логіка прийняття дзвінка
+}
 
+function activateAnsweringMachine(name) {
+  console.log(`Абонент ${name} недоступний, залиште повідомлення.`);
+  // Логіка активації автовідповідача
+}
 
+function leaveHoloMessage(name) {
+  console.log(`Абонент ${name} недоступний, записуємо голограму.`);
+  // Логіка запису голограми
+}
 
-
-const qwerty = (color, red) => color(red);
-
-const getColor = (color) => console.log(`Колір фону ${color}`);
-
-
-qwerty(getColor, "red")
-
-// function printValue(value) {
-//   console.log(value);
-// }
-
-// function prettyPrint(value) {
-//   console.log("Logging value: ", value);
-// }
-
-
-
-// function repeat(num, foo) {
-//   for(let i = 0; i < num; i += 1) {
-//     foo(i)
-//   }
-// }
-
-
-// repeat(5, printValue)
-// repeat(5, prettyPrint)
-/////////////////////////////////////////////
-// const numbers = [5, 10, 15, 20, 25];
-
-// numbers.forEach(function(num, index) {
-//   console.log(index, num);
-// })
-// console.log("-----------------------------------");
-// for(const number of numbers) {
-//   console.log(numbers.indexOf(number), number);
-// }
-
-let a = 5
-let b = 5 + a
+processCall("Манго", takeCall, activateAnsweringMachine);
+processCall("Полі", takeCall, leaveHoloMessage);
