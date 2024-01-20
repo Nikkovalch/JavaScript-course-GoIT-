@@ -96,10 +96,10 @@ registerGuest("Манго", function greet(name) {
 /*Метод перебирання масиву, який використовується 
 для заміни циклів for і for...of в роботі з колекцією даних.*/
 
-const num = [3, 11, 6, 7, 8, 9, 2];
+// const num = [3, 11, 6, 7, 8, 9, 2];
 
-num.forEach(function(element, index, arr) {
-  arr[index] = element + 2
-})
+// num.forEach(function(element, index, arr) {
+//   arr[index] = element + 2
+// })
 
-console.log(num);
+// console.log(num);
