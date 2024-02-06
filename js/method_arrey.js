@@ -186,12 +186,37 @@
 // console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
 // console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));;
 //===================================================
-function changeEven(numbers, value) {
-  const result = [];
+// function changeEven(numbers, value) {
+//   const result = [];
 
-  for (const num of numbers) {
-    !(num % 2) ? result.push(num + value) : result.push(num);
-  }
-  return result
-}
-console.log(changeEven([1, 2, 3, 4, 5], 10));
+//   for (const num of numbers) {
+//     !(num % 2) ? result.push(num + value) : result.push(num);
+//   }
+//   return result
+// }
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+//=============================================================
+// Change code below this line
+
+// const students = [
+//   { name: "Манго", score: 83, skills: ["js", "html"] },
+//   { name: "Полі", score: 59, skills: ["node.js", "css"] },
+//   { name: "Аякс", score: 37, skills: ["scss", "html"] },
+//   { name: "Ківі", score: 94, skills: ["java", "piton"] },
+//   { name: "Х'юстон", score: 64, skills: ["c++", "js"] },
+// ];
+// const result0 = students.map(item => item.score * 2)
+// console.log("map", result0);
+
+// const result = students.flatMap((user) => user.skills);
+// console.log("flatMap", result);
+
+// const result1 = students.filter((skill, idx, arr) => skill.score > 50 && skill.score < 80);
+// console.log("filter", result1);
+
+// const result2 = students.find((item) => item.skills.includes("piton"));
+// console.log(result2);
+
+// const result3 = students.findIndex((item) => item.skills.includes("piton"));
+// console.log(result3);
+
