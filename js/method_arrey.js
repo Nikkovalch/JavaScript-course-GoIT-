@@ -220,3 +220,25 @@
 // const result3 = students.findIndex((item) => item.skills.includes("piton"));
 // console.log(result3);
 
+
+
+==================//Сортування бульбашкою, та метод sort//============================
+const numbers = [5, 2, 8, 3, 1, 9, 4, 7, 6];
+
+// for(let i = 0; i < numbers.length; i += 1) {
+//   for(let f = 0; f < numbers.length; f += 1) {
+//     if(numbers[f] > numbers[f + 1]) {
+//       const num = numbers[f]
+//       numbers[f] = numbers[f + 1];
+//       numbers[f + 1] = num
+//     }
+//   }
+// }
+
+// console.log(numbers); 
+
+const result = [...numbers].sort((first, second) => first - second)
+const result1 = [...numbers].sort((first, second) => second - first)
+
+console.log(result);
+console.log(result1);
