@@ -220,10 +220,8 @@
 // const result3 = students.findIndex((item) => item.skills.includes("piton"));
 // console.log(result3);
 
-
-
-==================//Сортування бульбашкою, та метод sort//============================
-const numbers = [5, 2, 8, 3, 1, 9, 4, 7, 6];
+//==========================Сортування бульбашкою, та метод sort//============================
+// const numbers = [5, 2, 8, 3, 1, 9, 4, 7, 6];
 
 // for(let i = 0; i < numbers.length; i += 1) {
 //   for(let f = 0; f < numbers.length; f += 1) {
@@ -235,10 +233,43 @@ const numbers = [5, 2, 8, 3, 1, 9, 4, 7, 6];
 //   }
 // }
 
-// console.log(numbers); 
+// console.log(numbers);
 
-const result = [...numbers].sort((first, second) => first - second)
-const result1 = [...numbers].sort((first, second) => second - first)
+// const result = [...numbers].sort((first, second) => first - second)
+// const result1 = [...numbers].sort((first, second) => second - first)
 
-console.log(result);
-console.log(result1);
+// console.log(result);
+// console.log(result1);
+//====================================================
+// const str = ["a", "B", "A", "c", "b", "C"];
+
+// const result3 = [...str].sort((a, b) => a.localeCompare(b))
+
+// console.log(result3);
+
+// const users = [
+//   {
+//     name: "Jon",
+//     age: 22,
+//   },
+//   {
+//     name: "Piter",
+//     age: 18,
+//   },
+//   {
+//     name: "Jack",
+//     age: 24,
+//   },
+//   {
+//     name: "Bodya",
+//     age: 33,
+//   }
+// ];
+
+
+
+// const result = users.reduce((acc, item) => {
+//   acc.push({...item, age: item.age * 2})
+//   return acc
+// },[])
+
