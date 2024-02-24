@@ -332,32 +332,32 @@
 // a.b = 22
 // console.log(a);
 
-const contacts = [
-  {
-    firstName: "Akira",
-    lastName: "Laine",
-    number: "0543236543",
-    likes: ["Pizza", "Coding", "Brownie Points"],
-  },
-  {
-    firstName: "Harry",
-    lastName: "Potter",
-    number: "0994372684",
-    likes: ["Hogwarts", "Magic", "Hagrid"],
-  },
-  {
-    firstName: "Sherlock",
-    lastName: "Holmes",
-    number: "0487345643",
-    likes: ["Intriguing Cases", "Violin"],
-  },
-  {
-    firstName: "Kristian",
-    lastName: "Vos",
-    number: "unknown",
-    likes: ["JavaScript", "Gaming", "Foxes"],
-  },
-];
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
 
 // 1.Якщо (name) не відповідає жодному контакту, поверніть рядок (No such contact).
 
@@ -366,24 +366,49 @@ const contacts = [
 
 // 3.Якщо обидва параметри є істинними, повертається («значення») цієї властивості.
 
-function lookUpProfile(name, prop) {
-  for(const contact of contacts) {
+// function lookUpProfile(name, prop) {
+//   for(const contact of contacts) {
 
-    if(contact.firstName === name) {
+//     if(contact.firstName === name) {
 
-      if(contact.hasOwnProperty(prop)) {
-        return contact[prop]
-      } else {
-        return "No such property"
-      }
+//       if(contact.hasOwnProperty(prop)) {
+//         return contact[prop]
+//       } else {
+//         return "No such property"
+//       }
 
-    }
+//     }
 
-  }
+//   }
 
-  return "No such contact"
-}
+//   return "No such contact"
+// }
 
-console.log(lookUpProfile("Sherlock", "likes"));
+// console.log(lookUpProfile("Sherlock", "likes"));
 
+//=======рекурсія=======================================
+// function countdown(n) {
+//   if(n < 1) {
+//     return []
+//   } else {
+//     const result = [n]
+//     return result.concat(countdown(n - 1))
+//   }
+// }
 
+// console.log(countdown(5));
+
+// =====рекурсія=======================================
+// function rangeOfNumbers(startNum, endNum) {
+      
+//   if(startNum <= endNum) {
+//     const result = rangeOfNumbers(startNum, (endNum - 1))
+//     result.push(endNum)
+//     return result
+//   } else {
+//     return [];
+//   }
+
+// };
+
+// console.log(rangeOfNumbers(1, 5));// має повертати [1, 2, 3, 4, 5].
