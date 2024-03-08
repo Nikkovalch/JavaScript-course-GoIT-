@@ -865,112 +865,315 @@
 /*
  * Типів транзакцій всього два.
  * Можна покласти чи зняти гроші з рахунку.
- */
-const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
-};
+*/
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
 
-/*
- * Кожна транзакція це об'єкт із властивостями: id, type та amount
- */
+// /*
+//  * Кожна транзакція це об'єкт із властивостями: id, type та amount
+//  */
 
-const account = {
-  // Поточний баланс рахунку
-  balance: 0,
-  // id
-  // id: Number((Math.random() * 2).toString().slice(2,6)),
-  // Історія транзакцій
-  transactions: [],
+// const account = {
+//   // Поточний баланс рахунку
+//   balance: 0,
+//   // id
+//   // id: Number((Math.random() * 2).toString().slice(2,6)),
+//   // Історія транзакцій
+//   transactions: [],
 
 
-  /*
-   * Метод створює та повертає об'єкт транзакції.
-   * Приймає суму та тип транзакції.
-   */
-  createTransaction(amount, type) {
-    this.transactions.push({[type]: amount, id: Math.floor(Math.random() * 1000000)})
-  },
+//   /*
+//    * Метод створює та повертає об'єкт транзакції.
+//    * Приймає суму та тип транзакції.
+//    */
+//   createTransaction(amount, type) {
+//     this.transactions.push({[type]: amount, id: Math.floor(Math.random() * 1000000)})
+//   },
   
-  /*
-   * Метод, що відповідає за додавання суми до балансу.
-   * Приймає суму транзакції.
-   * Викликає createTransaction для створення об'єкта транзакції
-   * після чого додає його до історії транзакцій
-   */
-  deposit(amount) {
-    this.createTransaction(amount, Transaction.DEPOSIT)
-    this.balance += amount
-  },
+//   /*
+//    * Метод, що відповідає за додавання суми до балансу.
+//    * Приймає суму транзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його до історії транзакцій
+//    */
+//   deposit(amount) {
+//     this.createTransaction(amount, Transaction.DEPOSIT)
+//     this.balance += amount
+//   },
 
-  /*
-   * Метод, що відповідає за зняття суми з балансу.
-   * Приймає суму транзакції.
-   * Викликає createTransaction для створення об'єкта транзакції
-   * після чого додає його до історії транзакцій.
-   *
-   * Якщо amount більше ніж поточний баланс, виводь повідомлення
-   * про те, що зняття такої суми не можливе, недостатньо коштів.
-   */
-  withdraw(amount) {
-    this.createTransaction(amount, Transaction.WITHDRAW)
-    return amount > this.balance 
-    ? console.log("Зняття такої суми не можливе, недостатньо коштів" )
-    : this.balance -= amount
-  },
+//   /*
+//    * Метод, що відповідає за зняття суми з балансу.
+//    * Приймає суму транзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його до історії транзакцій.
+//    *
+//    * Якщо amount більше ніж поточний баланс, виводь повідомлення
+//    * про те, що зняття такої суми не можливе, недостатньо коштів.
+//    */
+//   withdraw(amount) {
+//     this.createTransaction(amount, Transaction.WITHDRAW)
+//     return amount > this.balance 
+//     ? console.log("Зняття такої суми не можливе, недостатньо коштів" )
+//     : this.balance -= amount
+//   },
 
-  /*
-   * Метод повертає поточний баланс
-   */
-  getBalance() {
-    return this.balance
-  },
+//   /*
+//    * Метод повертає поточний баланс
+//    */
+//   getBalance() {
+//     return this.balance
+//   },
 
-  /*
-   * Метод шукає та повертає об'єкт транзакції по id
-   */
-  getTransactionDetails(id) {
-    for(const obj of this.transactions) {
-      if(id === obj.id) {
-        return obj
-      }
-    }
-  },
+//   /*
+//    * Метод шукає та повертає об'єкт транзакції по id
+//    */
+//   getTransactionDetails(id) {
+//     for(const obj of this.transactions) {
+//       if(id === obj.id) {
+//         return obj
+//       }
+//     }
+//   },
 
-  /*
-   * Метод повертає кількість коштів
-   * певного типу транзакції з усієї історії транзакцій
-   */
-  getTransactionTotal(type) {
-    let total = 0;
-    let found;
+//   /*
+//    * Метод повертає кількість коштів
+//    * певного типу транзакції з усієї історії транзакцій
+//    */
+//   getTransactionTotal(type) {
+//     let total = 0;
+//     let found;
 
-    for(const transaction of this.transactions) {
-      const keys = Object.keys(transaction)
+//     for(const transaction of this.transactions) {
+//       const keys = Object.keys(transaction)
 
-      if(keys[0] === type) {
-        total += transaction[type]
-        found = true
-      } 
+//       if(keys[0] === type) {
+//         total += transaction[type]
+//         found = true
+//       } 
 
-    }
-    if(!found) {
-      console.log("Транзакції з таким типом не існує");
-    }
-    return total
-  },
+//     }
+//     if(!found) {
+//       console.log("Транзакції з таким типом не існує");
+//     }
+//     return total
+//   },
 
 
-};
+// };
 //"Транзакції з таким типом не існує"
 
-account.deposit(200)
-account.withdraw(20)
-account.deposit(200)
+// account.deposit(200)
+// account.withdraw(20)
+// account.deposit(200)
 
-account.withdraw(20)
-account.withdraw(100)
-account.deposit(200)
+// account.withdraw(20)
+// account.withdraw(100)
+// account.deposit(200)
 
-console.log(account.transactions);
-console.log(account.getTransactionTotal(Transaction.DEPOST));
+// console.log(account.transactions);
+// console.log(account.getTransactionTotal(Transaction.DEPOST));
+
+
+
+
+
+
+
+
+
+// Модуль 3 Заняття 6. Деструктуризація та rest/spread=======================================
+// Example 1 - Деструктуризація===================================
+//Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
+
+// function calcBMI(args) {
+//   const {weight, height} = args
+//   const numericWeight = Number(weight.replace(',', '.'));
+//   const numericHeight = Number(height.replace(',', '.'));
+//   return Number((numericWeight / numericHeight ** 2).toFixed(1));
+// }
+
+// // Очікується
+// console.log(
+//   calcBMI({
+//     weight: '88,3',
+//     height: '1.75',
+//   }),
+// );
+// console.log(
+//   calcBMI({
+//     weight: '68,3',
+//     height: '1.65',
+//   }),
+// );
+// console.log(
+//   calcBMI({
+//     weight: '118,3',
+//     height: '1.95',
+//   }),
+// );
+
+
+//Example 2 - Деструктуризація=========================================================
+//Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
+
+// function printContactsInfo({names, phones}) {
+
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   }
+// }
+
+// // Було
+// // printContactsInfo(
+// //   'Jacob,William,Solomon,Artemis',
+// //   '89001234567,89001112233,890055566377,890055566300',
+// // );
+
+// // Очікується
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
+
+// Example 3 - Глибока деструктуризація=================================================
+// Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
+
+// function getBotReport(obj) {
+//   const{companyName, bots: {repair: repairBots, defence: defenceBots}} = obj;
+
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// }
+
+// // Було
+// // console.log(getBotReport('Cyberdyne Systems', 150, 50));
+
+// // Очікується
+// console.log(
+//   getBotReport({
+//     companyName: 'Cyberdyne Systems',
+//     bots: {
+//       repair: 150,
+//       defence: 50,
+//     },
+//   }),
+// );
+
+
+
+//Example 4 - Деструктуризація
+
+//Перепиши функцію так, щоб вона приймала об'єкт параметрів із властивостями companyName та stock та виводила репорт про кількість товарів на складі будь-якої компанії.
+
+
+// function getStockReport(obj) {
+//   const { companyName, stock: {repairBots, defenceBots} } = obj;
+
+//   return `${companyName} has ${repairBots + defenceBots} items in stock`;
+// }
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdyne Systems',
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   }),
+// ); // "Cyberdyne Systems has 200 items in stock"
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Belacci',
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   }),
+// ); // "Belacci has 35 item in stock"
+
+
+
+// Example 5 - Операція spread==========================================================================
+
+
+// Доповни функцію createContact(partialContact) так, щоб вона повертала новий об'єкт контакту з доданими властивостями id та createdAt, 
+//а також list зі значенням "default" якщо в partialContact немає такої властивості.
+
+
+
+// Рішення
+// function createContact(partialContact) {
+//   return {
+//     list: 'default',
+//     ...partialContact,
+//     id: generateId(),
+//     createdAt: Date.now(),
+//   };
+// }
+
+
+
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   }),
+// );
+
+
+
+// console.log(
+//   createContact({
+//     name: 'Poly',
+//     email: 'poly@hotmail.com',
+//   }),
+// );
+
+
+
+// //=============РАНДОМНЕ ЧИСЛО==========
+// function generateId() {
+//   return '_' + Math.random().toString(36).substr(2, 9);
+// }
+
+
+
+//=======================================================================
+
+
+// //Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
+
+// // Рішення
+// function transformUsername({ firstName, lastName, ...otherProps }) {
+//   return {
+//     fullName: `${firstName} ${lastName}`,
+//     ...otherProps,
+//   };
+// }
+
+// console.log(
+//   transformUsername({
+//     id: 1,
+//     firstName: 'Jacob',
+//     lastName: 'Mercer',
+//     email: 'j.mercer@mail.com',
+//     friendCount: 40,
+//   }),
+// );
+
+// console.log(
+//   transformUsername({
+//     id: 2,
+//     firstName: 'Adrian',
+//     lastName: 'Cross',
+//     email: 'a.cross@hotmail.com',
+//     friendCount: 20,
+//   }),
+// );

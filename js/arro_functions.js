@@ -110,19 +110,19 @@
 // logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в консоль
 // Рішення
 
-function createProduct (obj, callback) {
-  const product = {
-    id: Date.now(),
-    ...obj
-  }
-  callback(product)
-}
+// function createProduct (obj, callback) {
+//   const product = {
+//     id: Date.now(),
+//     ...obj
+//   }
+//   callback(product)
+// }
 
-const logProduct = (product) => console.log(product);;
-const logTotalPrice = ({quantity, price}) => console.log(quantity * price);;
+// const logProduct = (product) => console.log(product);;
+// const logTotalPrice = ({quantity, price}) => console.log(quantity * price);;
 
-createProduct({name: "🍌", quantity: 6, price: 15,}, logProduct);
-createProduct({name: "🍓", quantity: 6, price: 15,}, logTotalPrice);
+// createProduct({name: "🍌", quantity: 6, price: 15,}, logProduct);
+// createProduct({name: "🍓", quantity: 6, price: 15,}, logTotalPrice);
 //==================================Example 2 - Коллбек функції
 /*Додайте об'єкт account методи withdraw(amount, onSuccess, onError) 
 та deposit(amount, onSuccess, onError), де перший параметр це сума операції, а другий та третій - коллбеки.*/
