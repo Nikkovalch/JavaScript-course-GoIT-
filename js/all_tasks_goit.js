@@ -721,7 +721,7 @@
 
 // const addCourse = ((obj, item) => {
 //   if(!obj.includes(item)) {
-//     obj.push(item) 
+//     obj.push(item)
 //   } else {
 //     console.log("Ви вже маєте такий курс");
 //   }
@@ -745,8 +745,6 @@
 // console.log(courses);
 // removeCourse('Vue'); // 'Курс із таким ім'ям не знайдено'
 
-
-
 // const updateCourse = (obj, oldName, newName) => {
 //   if(obj.includes(oldName)) {
 //     obj.splice(obj.indexOf(oldName), 1, newName)
@@ -756,7 +754,6 @@
 // updateCourse(courses,'Express', 'NestJS');
 
 // console.log(courses);
-
 
 //===============================================================
 
@@ -787,8 +784,6 @@
 //   }
 // };
 
-
-
 // // user.hobby = 'skydiving'
 // // user.premium = false
 
@@ -796,16 +791,14 @@
 // user.replacement("hobby", 'skydiving')
 // user.replacement("premium", false)
 
-
 // console.log(user.createArray());
 // console.log(user);
 //==========================================================================================
 
 // Example 2 - метод Object.values()
 
-
-// У нас є об'єкт, де зберігаються зарплати нашої команди. 
-// Напишіть код для підсумовування всіх зарплат і збережіть результат у змінній sum. Повинно вийти 390. 
+// У нас є об'єкт, де зберігаються зарплати нашої команди.
+// Напишіть код для підсумовування всіх зарплат і збережіть результат у змінній sum. Повинно вийти 390.
 // Якщо об'єкт salaries порожній, то результат має бути 0.
 
 // const salaries = {
@@ -827,10 +820,8 @@
 
 // Example 3 - Масив об'єктів
 
-
-// Напишіть функцію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю. 
+// Напишіть функцію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю.
 // Функція рахує і повертає загальну вартість каміння з таким ім'ям, ціною та кількістю з об'єкта
-
 
 // const stones = [
 //   { name: 'Смарагд', price: 1300, quantity: 4 },
@@ -848,7 +839,7 @@
 //     if(name === stoneName) {
 //       sum += price * quantity
 //     }
-    
+
 //   }
 
 //   return sum
@@ -856,16 +847,15 @@
 
 // console.log(calcTotalPrice(stones, 'Сапфір'));
 
-
 // Example 4 - Комплексні завдання
 
-// Напиши скрипт управління особистим кабінетом інтернет банку. 
+// Напиши скрипт управління особистим кабінетом інтернет банку.
 // Є об'єкт account в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.
 
 /*
  * Типів транзакцій всього два.
  * Можна покласти чи зняти гроші з рахунку.
-*/
+ */
 // const Transaction = {
 //   DEPOSIT: 'deposit',
 //   WITHDRAW: 'withdraw',
@@ -883,7 +873,6 @@
 //   // Історія транзакцій
 //   transactions: [],
 
-
 //   /*
 //    * Метод створює та повертає об'єкт транзакції.
 //    * Приймає суму та тип транзакції.
@@ -891,7 +880,7 @@
 //   createTransaction(amount, type) {
 //     this.transactions.push({[type]: amount, id: Math.floor(Math.random() * 1000000)})
 //   },
-  
+
 //   /*
 //    * Метод, що відповідає за додавання суми до балансу.
 //    * Приймає суму транзакції.
@@ -914,7 +903,7 @@
 //    */
 //   withdraw(amount) {
 //     this.createTransaction(amount, Transaction.WITHDRAW)
-//     return amount > this.balance 
+//     return amount > this.balance
 //     ? console.log("Зняття такої суми не можливе, недостатньо коштів" )
 //     : this.balance -= amount
 //   },
@@ -951,7 +940,7 @@
 //       if(keys[0] === type) {
 //         total += transaction[type]
 //         found = true
-//       } 
+//       }
 
 //     }
 //     if(!found) {
@@ -959,7 +948,6 @@
 //     }
 //     return total
 //   },
-
 
 // };
 //"Транзакції з таким типом не існує"
@@ -974,14 +962,6 @@
 
 // console.log(account.transactions);
 // console.log(account.getTransactionTotal(Transaction.DEPOST));
-
-
-
-
-
-
-
-
 
 // Модуль 3 Заняття 6. Деструктуризація та rest/spread=======================================
 // Example 1 - Деструктуризація===================================
@@ -1014,7 +994,6 @@
 //   }),
 // );
 
-
 //Example 2 - Деструктуризація=========================================================
 //Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
@@ -1039,7 +1018,6 @@
 //   phones: '89001234567,89001112233,890055566377,890055566300',
 // });
 
-
 // Example 3 - Глибока деструктуризація=================================================
 // Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
@@ -1063,12 +1041,9 @@
 //   }),
 // );
 
-
-
 //Example 4 - Деструктуризація
 
 //Перепиши функцію так, щоб вона приймала об'єкт параметрів із властивостями companyName та stock та виводила репорт про кількість товарів на складі будь-якої компанії.
-
 
 // function getStockReport(obj) {
 //   const { companyName, stock: {repairBots, defenceBots} } = obj;
@@ -1097,15 +1072,10 @@
 //   }),
 // ); // "Belacci has 35 item in stock"
 
-
-
 // Example 5 - Операція spread==========================================================================
 
-
-// Доповни функцію createContact(partialContact) так, щоб вона повертала новий об'єкт контакту з доданими властивостями id та createdAt, 
+// Доповни функцію createContact(partialContact) так, щоб вона повертала новий об'єкт контакту з доданими властивостями id та createdAt,
 //а також list зі значенням "default" якщо в partialContact немає такої властивості.
-
-
 
 // Рішення
 // function createContact(partialContact) {
@@ -1117,8 +1087,6 @@
 //   };
 // }
 
-
-
 // console.log(
 //   createContact({
 //     name: 'Mango',
@@ -1127,8 +1095,6 @@
 //   }),
 // );
 
-
-
 // console.log(
 //   createContact({
 //     name: 'Poly',
@@ -1136,17 +1102,12 @@
 //   }),
 // );
 
-
-
 // //=============РАНДОМНЕ ЧИСЛО==========
 // function generateId() {
 //   return '_' + Math.random().toString(36).substr(2, 9);
 // }
 
-
-
 //=======================================================================
-
 
 // //Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
 
@@ -1178,12 +1139,11 @@
 //   }),
 // );
 
-
 // const calсulateAverage = (...args) => {
 //   let total = 0;
 //   let arrLength;
 //   args.forEach(function (num, idx, arr) {
-//     total += num 
+//     total += num
 //     arrLength = arr.length
 //   })
 //   // let total = 0;
@@ -1196,3 +1156,396 @@
 // console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
 // console.log(calсulateAverage(14, 8, 2)); // 8
 // console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+
+//=======Модуль 4. Заняття 7. Коллбеки. Стрілочні функції. forEach======================
+//Example 1 - Коллбек функції==
+
+//Напишіть наступні функції:==
+
+//createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт товару,
+//додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому створений об'єкт.
+//logProduct(product) - колббек приймаючий об'єкт продукту і логуючий його в консоль
+//logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в консоль
+
+// Рішення
+
+// function createProduct(obj, callback) {
+//   const product = {
+//     ...obj,
+//     id: Date.now(),
+//   }
+//   callback(product)
+// }
+
+// function provideGoods(product) {
+//   console.log(product);
+// }
+
+// function logTotalPrice({price, quantity}) {
+//   console.log(price * quantity);
+// }
+
+// createProduct({ name: '🍎', price: 30, quantity: 3 }, provideGoods);
+// createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+
+/*Додайте об'єкт account методи withdraw(amount, onSuccess, onError) 
+та deposit(amount, onSuccess, onError), де перший параметр це сума операції, а другий та третій - коллбеки.
+
+Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance, і onSuccess в іншому випадку.
+
+Метод deposit викликає onError якщо amount більше TRANSACTION_LIMIT або менше або дорівнює нулю, і onSuccess в іншому випадку.*/
+
+// Рішення
+// const TRANSACTION_LIMIT = 1000;
+
+// const account = {
+//   username: 'Jacob',
+//   balance: 400,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount > this.balance) {
+//       onError(`Amount can't exceed account balance of ${this.balance} credits`);
+//     } else {
+//       this.balance -= amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount <= 0) {
+//       onError(`Amount must be more than 0 credits`);
+//     } else {
+//       this.balance += amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+// };
+
+// function handleSuccess(message) {
+//   console.log(`✅ Success! ${message}`);
+// }
+// function handleError(message) {
+//   console.log(`❌ Error! ${message}`);
+// }
+
+// account.withdraw(2000, handleSuccess, handleError);
+// // account.withdraw(600, handleSuccess, handleError);
+// // account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// // account.deposit(0, handleSuccess, handleError);
+// // account.deposit(-600, handleSuccess, handleError);
+// // account.deposit(600, handleSuccess, handleError);
+
+//Example 3 - Коллбек функції=============================================
+
+//Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву.
+//Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
+
+// Рішення
+// function each(array, callback) {
+//   const newArr = [];
+//   for (const el of array) {
+//     newArr.push(callback(el));
+//   }
+//   return newArr;
+// }
+
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value * 2;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return value - 10;
+//   })
+// );
+// console.log(
+//   each([64, 49, 36, 25, 16], function (value) {
+//     return Math.sqrt(value);
+//   })
+// );
+// console.log(
+//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.ceil(value);
+//   })
+// );
+// console.log(
+//   each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
+//     return Math.floor(value);
+//   })
+// );
+
+
+
+// Example 4 - Стрілочні функції=====================================
+
+//Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+// const createProduct = (partialProduct, callback) => callback({ id: Date.now(), ...partialProduct });
+
+// const logProduct = product => console.log(product);
+// const logTotalPrice = product => console.log(product.price * product.quantity);
+
+// createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
+// createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+
+//Example 5 - Стрілочні функції
+//Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+// const TRANSACTION_LIMIT = 1000;
+
+// const account = {
+//   username: 'Jacob',
+//   balance: 400,
+//   withdraw(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount > this.balance) {
+//       onError(`Amount can't exceed account balance of ${this.balance} credits`);
+//     } else {
+//       this.balance -= amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+//   deposit(amount, onSuccess, onError) {
+//     if (amount > TRANSACTION_LIMIT) {
+//       onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//     } else if (amount <= 0) {
+//       onError(`Amount must be more than 0 credits`);
+//     } else {
+//       this.balance += amount;
+//       onSuccess(`Account balance: ${this.balance}`);
+//     }
+//   },
+// };
+
+// const handleSuccess = (message) => console.log(`✅ Success! ${message}`);
+
+// const handleError = (message) => console.log(`❌ Error! ${message}`);
+
+// account.withdraw(2000, handleSuccess, handleError);
+// account.withdraw(600, handleSuccess, handleError);
+// account.withdraw(300, handleSuccess, handleError);
+// account.deposit(1700, handleSuccess, handleError);
+// account.deposit(0, handleSuccess, handleError);
+// account.deposit(-600, handleSuccess, handleError);
+// account.deposit(600, handleSuccess, handleError);
+
+
+
+
+
+//Example 6 - Інлайн стрілочні функції=============================================
+
+//Виконайте рефакторинг коду за допомогою стрілочних функцій.==================
+
+// const each = (array, callback) => {
+//   const newArr = [];
+//   for (const el of array) {
+//     newArr.push(callback(el));
+//   }
+//   return newArr;
+// }
+
+// console.log(each([64, 49, 36, 25, 16], (value) => value * 2));
+// console.log(each([64, 49, 36, 25, 16], (value) => value - 10));
+// console.log(each([64, 49, 36, 25, 16], (value) => Math.sqrt(value)));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], (value) => Math.ceil(value)));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], (value) => Math.floor(value)));
+
+//Example 7 - Метод forEach======================
+//Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.============================
+
+// function logItems(items) {
+//   items.forEach((element, idx) => {
+//     console.log(`${idx + 1} - ${element}`);
+//   });
+// }
+
+// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+
+//Example 8 - Метод forEach==============================
+
+//Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   nameList.forEach((element, idx) => {
+//     console.log(`${element} - ${phoneList[idx]}`);
+//   })
+// }
+
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+
+// Example 9 - Метод forEach
+//Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+// function calсulateAverage(...args) {
+//   let total = 0;
+//   let objlength;
+
+// args.forEach((element, idx, obj) => {
+//   total += element;
+//   objlength = obj.length
+// })
+
+//   return total / objlength
+// }
+
+// console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calсulateAverage(14, 8, 2)); // 8
+// console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+
+
+
+
+
+
+
+
+//Модуль 4. Заняття 8. Перебираючі методи масиву
+//Колекція об'єктів для всіх прикладів з автомобілями
+
+
+const cars = [
+  { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+  { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+  { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+  { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+  { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+  { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+  { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+  { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+  { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+];
+
+
+//Example 1 - Метод map=========================
+//Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
+
+// const getModels = cars => {
+//   const newCars = cars.map(item => item.model)
+//   return newCars
+// };
+
+// console.log(getModels(cars));
+
+
+//Example 2 - Метод map========================
+//Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінним значенням властивості price залежно від переданої знижки.
+// const makeCarsWithDiscount = (cars, discount) => {
+//   const newCars = cars.map(item => {
+//     item.discount = discount * 100
+//     item.price -= (item.price * item.discount) / 100
+//     return item
+//   })
+//   return newCars
+// };
+
+// console.log(makeCarsWithDiscount(cars, 0.2));//19236
+// console.log(makeCarsWithDiscount(cars, 0.4));
+
+
+
+
+
+//Example 3 - Метод filter================================
+// Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж значення параметра threshold.
+
+// const filterByPrice = (cars, threshold) => cars.filter(({price}) => price > threshold)
+
+// console.log(filterByPrice(cars, 30000));
+// console.log(filterByPrice(cars, 25000));
+
+
+//Example 4 - Метод filter================================
+//Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
+
+// const getCarsWithDiscount = cars => cars.filter(({onSale}) => onSale === true)
+
+// console.log(getCarsWithDiscount(cars));
+
+
+
+//Example 5 - Метод filter==========================================
+
+//Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається зі значенням параметра type.
+
+// const getCarsWithType = (cars, type) => cars.filter(({type}) => type === type );
+
+// console.log(getCarsWithType(cars, 'suv'));
+// console.log(getCarsWithType(cars, 'sedan'));
+
+
+
+
+
+//Example 6 - Метод find===========================
+
+// const getCarByModel = (cars, model) => cars.find(({model: carModel}) => carModel === model);
+
+// console.log(getCarByModel(cars, 'F-150'));
+// console.log(getCarByModel(cars, 'CX-9'));
+
+
+
+//Example 7 - Метод sort========================
+//Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за зростанням значення якості amount.
+
+// const sortByAscendingAmount = cars => {
+//   const newObj = [...cars].sort((a,b) => a.amount - b.amount)
+//   return newObj
+// }
+
+// console.log(sortByAscendingAmount(cars));
+// console.log(cars);
+
+
+// Example 8 - Метод sort==================
+//Нехай функція sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення властивості price.
+
+// const sortByDescendingPrice = cars => {
+//   const newObj = [...cars].sort((a, b) => b.price - a.price)
+//   return newObj
+// };
+
+// console.log(sortByDescendingPrice(cars));
+
+
+
+//Example 9 - Метод sort=========================
+//Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному 
+//та зворотному алфавітному порядку, в залежності від значення параметра order.
+
+// const sortByModel = (cars, order) => {
+//   if(order === 'asc') {
+//     return [...cars].sort((a,b) => a.model.localeCompare(b.model))
+//   }
+
+//   if(order === 'desc') {
+//     return [...cars].sort((a,b) => b.model.localeCompare(a.model))
+//   }
+// };
+
+// console.log(sortByModel(cars, 'asc'));
+// console.log(sortByModel(cars, 'desc'));
+
+
+
+
+// Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
+
+const getTotalAmount = cars => cars.reduce((ak, item) => ak + item.amount ,0)
+
+
+console.log(getTotalAmount(cars));
