@@ -1541,11 +1541,34 @@ const cars = [
 // console.log(sortByModel(cars, 'desc'));
 
 
-
+//Example 10 - Метод reduce
 
 // Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
 
-const getTotalAmount = cars => cars.reduce((ak, item) => ak + item.amount ,0)
+// const getTotalAmount = cars => cars.reduce((ak, item) => ak + item.amount ,0)
 
 
-console.log(getTotalAmount(cars));
+// console.log(getTotalAmount(cars));
+
+
+
+//Example 11 - Ланцюжки методів
+//Нехай функція getModelsOnSale повертає масив моделей автомобілів, 
+//але тільки тих, які зараз на розпродажі.
+
+// const getModelsOnSale = cars => cars.filter((item) => item.onSale).map(item => item.model);
+
+// console.log(getModelsOnSale(cars));
+
+
+
+//Example 12 - Ланцюжки методів
+//Нехай функція getSortedCarsOnSale повертає масив автомобілів на розпродажі 
+//(Властивість onSale), відсортованих за зростанням ціни.
+
+// const getSortedCarsOnSale = cars => cars.filter(item => item.onSale).sort((a,b) => a.price - b.price);
+
+
+
+
+
