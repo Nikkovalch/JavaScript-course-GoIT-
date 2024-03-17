@@ -1416,18 +1416,18 @@
 //Колекція об'єктів для всіх прикладів з автомобілями
 
 
-const cars = [
-  { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
-  { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
-  { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
-  { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
-  { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
-  { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
-  { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
-  { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
-  { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
-  { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
-];
+// const cars = [
+//   { make: 'Honda', model: 'CR-V', type: 'suv', amount: 14, price: 24045, onSale: true },
+//   { make: 'Mazda', model: 'Mazda 6', type: 'sedan', amount: 8, price: 24195, onSale: false },
+//   { make: 'Mazda', model: 'CX-9', type: 'suv', amount: 7, price: 31520, onSale: true },
+//   { make: 'Honda', model: 'Accord', type: 'sedan', amount: 2, price: 22455, onSale: true },
+//   { make: 'Ford', model: 'F-150', type: 'truck', amount: 11, price: 27110, onSale: true },
+//   { make: 'Toyota', model: 'Tacoma', type: 'truck', amount: 4, price: 24320, onSale: true },
+//   { make: 'Ford', model: 'Fusion', type: 'sedan', amount: 13, price: 22120, onSale: true },
+//   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false },
+//   { make: 'Toyota', model: '4Runner', type: 'suv', amount: 19, price: 34210, onSale: false },
+//   { make: 'Toyota', model: 'Sequoia', type: 'suv', amount: 16, price: 45560, onSale: false },
+// ];
 
 
 //Example 1 - Метод map=========================
@@ -1572,3 +1572,102 @@ const cars = [
 
 
 
+//====================================Модуль 5. Заняття 9. Контекст виклику функції та this======================================================
+
+
+
+//Example 1 - Майстерня коштовностей=====
+
+//Напишіть метод calcTotalPrice(stoneName), який приймає назву каменю і розраховує та повертає загальну вартість 
+//каменів з таким ім'ям, ціною та кількістю з властивості stones.
+
+// const chopShop = {
+//   stones: [
+//     { name: 'Emerald', price: 1300, quantity: 4 },
+//     { name: 'Diamond', price: 2700, quantity: 3 },
+//     { name: 'Sapphire', price: 1400, quantity: 7 },
+//     { name: 'Ruby', price: 800, quantity: 2 },
+//   ],
+//   calcTotalPrice(stoneName) {
+//     const result = this.stones.find(({name}) => name === stoneName)
+//     return result ? result.price * result.quantity : "Такого каменю не знайдено!"
+//   },
+// };
+
+// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+
+
+
+
+
+
+//Example 2 - Телефонна книга
+
+//Виконайте рефакторинг методів об'єкту phonebook щоб код запрацював.
+
+// const phonebook = {
+//   contacts: [],
+//   add(contact) {
+//     const newContact = {
+//       list: 'default',
+//       ...contact,
+//       id: this.generateId(),
+//       createdAt: this.getDate(),
+//     };
+//     this.contacts.push(newContact);
+//   },
+
+
+//   generateId() {
+//     return '_' + Math.random().toString(36).substr(2, 9);
+//   },
+//   getDate() {
+//     return Date.now();
+//   },
+// };
+
+
+
+// phonebook.add({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   }),
+
+
+// phonebook.add({
+//     name: 'Poly',
+//     email: 'poly@hotmail.com',
+//   }),
+
+// console.log(phonebook.contacts);
+
+
+//Example 3 - Калькулятор
+//Створіть об'єкт calculator з трьома методами:
+
+// read(a, b)- приймає два значення та зберігає їх як властивості об'єкта.
+// add() - повертає суму збережених значень.
+// mult() - перемножує збережені значення та повертає результат.
+
+// const calculator = {
+
+//   read(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+//   add() {
+//     return (this.a || 0)  + (this.b || 0)
+//   },
+//   mult() {
+//     return (this.a || 0)  * (this.b || 0)
+//   },
+// };
+
+// calculator.read(3, 5);
+
+// console.log(calculator.add());// додавання
+// console.log(calculator.mult());// множення
